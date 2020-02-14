@@ -1,12 +1,17 @@
 # react-native-download-notification
-Create, update and handle intents from Android notifications with progress bar in React Native.
+
+- Create, update and handle intents from Android notifications with progress bar in React Native.
+- Update to support Oreo+ using [lucienbl's fork code](https://github.com/lucienbl/react-native-download-notification)
+- Added stop action button and other custom perks (silent notification, title and content text updates and others)
 
 ## Instalation
+
 ```
-npm install rodriguezmartin/react-native-download-notification --save
-``` 
+yarn add eberperetto/react-native-download-notification#1/head
+```
 
 ## Usage
+
 ```js
 // First import it
 import  DownloadNotification  from  'react-native-download-notification';
@@ -39,12 +44,13 @@ notification.setStateFailed();
 ```
 
 ## Customization
+
 ```js
 // You can globally customize the icon and labels of the notifications.
 componentDidMount(){
   DownloadNotification.setup({
     icon: 'ic_launcher', // Default is the 'get_app' material icon.
-    downloadingLabel: 'Downloading...', // Default is 'Downloading' 
+    downloadingLabel: 'Downloading...', // Default is 'Downloading'
     completedLabel: 'The download is complete', // Default is 'Download Completed'
     failedLabel: 'The download has failed', // Default is 'Download Failed'
     cancelledLabel: 'The download has been cancelled' // Default is 'Download Cancelled'
