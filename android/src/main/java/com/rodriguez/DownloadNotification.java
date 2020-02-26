@@ -90,6 +90,14 @@ public class DownloadNotification {
       TimeUnit.SECONDS.sleep(1);
       builder.setContentText(labels.get(state));
       builder.setProgress(0, 0, false);
+      builder.extend(new NotificationCompat.Extender() {
+         @Override
+         public NotificationCompat.Builder extend(NotificationCompat.Builder builder) {
+            // Clear stop action button
+            builder.mActions.clear();
+            return builder;
+         }
+      });
       builder.setContentIntent(Objects.equals(state,"completed") ? newIntent("open") : newIntent("dismiss"));
       builder.setAutoCancel(true);
       publish();
