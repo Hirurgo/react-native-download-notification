@@ -85,6 +85,16 @@ public class DownloadNotification {
     publish();
   }
 
+  @ReactMethod
+  public void clearAllAppNotifications(){
+    new Thread(new Runnable() {
+      @Override
+      public void run() {
+        notiManager.cancelAll();
+      }
+    }).start();
+  }
+
   public void finish(String state) {
     try{
       TimeUnit.SECONDS.sleep(1);
