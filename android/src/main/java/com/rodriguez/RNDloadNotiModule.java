@@ -51,6 +51,7 @@ public class RNDloadNotiModule extends ReactContextBaseJavaModule {
     labels.put("completed", "Download completed");
     labels.put("failed", "Download failed");
     labels.put("cancelled", "Download cancelled");
+    labels.put("finishedTitle", "Download");
   }
 
   @ReactMethod
@@ -72,6 +73,9 @@ public class RNDloadNotiModule extends ReactContextBaseJavaModule {
         }
         if(options.hasKey("cancelledLabel")){
           labels.put("cancelled", options.getString("cancelledLabel"));
+        }
+        if(options.hasKey("finishedTitle")){
+          labels.put("finishedTitle", options.getString("finishedTitle"));
         }
       }
     }).start();
@@ -96,6 +100,27 @@ public class RNDloadNotiModule extends ReactContextBaseJavaModule {
       public void run() {
         notifications[notiId].updateProgress(progress);
         promise.resolve(true);
+      }
+    }).start();
+  }
+
+  @ReactMethod
+  public void updateContentTitle(final int notiId, final String title, final Promise promise){
+    new Thread(new Runnable() {
+      @Override
+      public void run() {
+        notifications[notiId].updateContentTitle(title);
+        promise.resolve(true);
+      }
+    }).start();
+  }
+
+  @ReactMethod
+  public void clearAllAppNotifications(){
+    new Thread(new Runnable() {
+      @Override
+      public void run() {
+        notiManager.cancelAll();
       }
     }).start();
   }

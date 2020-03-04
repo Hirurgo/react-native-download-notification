@@ -23,6 +23,9 @@ class Notification {
   updateProgress = progress => {
     DownloadNotification.updateProgress(this.id, progress);
   };
+  updateContentTitle = title => {
+    DownloadNotification.updateContentTitle(this.id, title);
+  };
   setStateCompleted = () => {
     DownloadNotification.finish(this.id, "completed");
   };

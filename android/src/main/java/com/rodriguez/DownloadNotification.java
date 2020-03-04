@@ -85,19 +85,15 @@ public class DownloadNotification {
     publish();
   }
 
-  @ReactMethod
-  public void clearAllAppNotifications(){
-    new Thread(new Runnable() {
-      @Override
-      public void run() {
-        notiManager.cancelAll();
-      }
-    }).start();
+  public void updateContentTitle(String title) {
+    builder.setContentTitle(title);
+    publish();
   }
 
   public void finish(String state) {
     try{
       TimeUnit.SECONDS.sleep(1);
+      builder.setContentTitle(labels.get("finishedTitle"));
       builder.setContentText(labels.get(state));
       builder.setProgress(0, 0, false);
       builder.extend(new NotificationCompat.Extender() {
