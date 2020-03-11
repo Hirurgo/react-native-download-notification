@@ -91,6 +91,7 @@ public class RNDloadNotiModule extends ReactContextBaseJavaModule {
         promise.resolve(lastNotiId);
       }
     }).start();
+    reactContext.startService(new Intent(getCurrentActivity(), RNDloadNotiService.class));
   }
 
   @ReactMethod

@@ -66,7 +66,7 @@ public class DownloadNotification {
 
     Bundle bundle = new Bundle();
 
-    int importance = NotificationManager.IMPORTANCE_HIGH;
+    int importance = NotificationManager.IMPORTANCE_LOW;
 
     NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Download Notification", importance);
 
@@ -106,6 +106,7 @@ public class DownloadNotification {
       });
       builder.setContentIntent(Objects.equals(state,"completed") ? newIntent("open") : newIntent("dismiss"));
       builder.setAutoCancel(true);
+      reactContext.stopService(new Intent(reactContext.getCurrentActivity(), RNDloadNotiService.class));
       publish();
     }
     catch(Exception e){}
