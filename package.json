@@ -1,4 +1,3 @@
-
 {
   "name": "react-native-download-notification",
   "version": "1.0.0",
@@ -9,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github:rodriguezmartin/react-native-download-notification"
+    "url": "https://github.com/Hirurgo/react-native-download-notificationn"
   },
   "keywords": [
     "react",
@@ -23,9 +22,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rodriguezmartin/react-native-download-notification/issues"
+    "url": "https://github.com/Hirurgo/react-native-download-notification"
   },
-  "homepage": "https://github.com/rodriguezmartin/react-native-download-notification#readme",
+  "homepage": "https://github.com/Hirurgo/react-native-download-notification",
   "peerDependencies": {
     "react-native": "*"
   }
