@@ -1,6 +1,6 @@
 {
   "name": "react-native-android-downloading-notifications",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Create, update and handle intents from Android notifications with progress bar in React Native.",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/Hirurgo/react-native-download-notification.git"
   },
-  "publishConfig" : {
-    "registry" : "https://registry.npmjs.org/"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "react",
