@@ -7,7 +7,7 @@
 ## Instalation
 
 ```
-yarn add eberperetto/react-native-download-notification#1/head
+yarn add react-native-android-downloading-notifications
 ```
 
 ## Usage
