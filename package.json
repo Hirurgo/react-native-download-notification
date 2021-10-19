@@ -1,6 +1,6 @@
 {
-  "name": "react-native-download-notification",
-  "version": "1.0.1",
+  "name": "react-native-android-downloading-notifications",
+  "version": "0.0.2",
   "description": "Create, update and handle intents from Android notifications with progress bar in React Native.",
   "main": "index.js",
   "scripts": {
