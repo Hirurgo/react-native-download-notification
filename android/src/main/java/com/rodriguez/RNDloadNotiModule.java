@@ -52,6 +52,7 @@ public class RNDloadNotiModule extends ReactContextBaseJavaModule {
     labels.put("failed", "Download failed");
     labels.put("cancelled", "Download cancelled");
     labels.put("finishedTitle", "Download");
+    labels.put("cancelButtonLabel", "Stop");
   }
 
   @ReactMethod
@@ -76,6 +77,9 @@ public class RNDloadNotiModule extends ReactContextBaseJavaModule {
         }
         if(options.hasKey("finishedTitle")){
           labels.put("finishedTitle", options.getString("finishedTitle"));
+        }
+        if(options.hasKey("cancelButtonLabel")){
+          labels.put("cancelButtonLabel", options.getString("cancelButtonLabel"));
         }
       }
     }).start();

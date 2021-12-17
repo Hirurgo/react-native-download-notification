@@ -44,7 +44,7 @@ public class DownloadNotification {
       .setProgress(100, 0, true)
       .setDeleteIntent(newIntent("dismiss"))
       .setContentIntent(newIntent("open"))
-      .addAction(reactContext.getResources().getIdentifier(labels.get("icon"), "mipmap", reactContext.getPackageName()), "Parar", newIntent("stop"));
+      .addAction(reactContext.getResources().getIdentifier(labels.get("icon"), "mipmap", reactContext.getPackageName()), labels.get("cancelButtonLabel"), newIntent("stop"));
     publish();
   }
 
